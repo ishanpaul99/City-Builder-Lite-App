@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>City Builder Lite</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="city-builder-lite.png">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="page-shell">
+    <div class="sky-layer"></div>
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+    <div class="page-content">
+      <nav class="navbar">
+        <div class="brand">
+          <img src="city-builder-lite.png" alt="logo" width="100px">
+          <span class="brand-title">City Builder Lite</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#build">Build</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+
+      <header class="hero" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow">Modern city strategy</p>
+          <h1>Build Your Dream City.</h1>
+          <p>Place buildings, manage resources, and create the perfect urban paradise.</p>
+          <a class="cta-button" href="#build">Start Building</a>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="hero-stat">🏡</div>
+            <p>Design a thriving metropolis with balance and imagination.</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="features-section">
+        <div class="section-heading">
+          <p class="eyebrow">Game Features</p>
+          <h2>Smart tools for creative city building.</h2>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card">
+            <h3>Interactive City Building</h3>
+            <p>Drag your strategy into an 8×8 city grid and place buildings with playful, responsive controls.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Resource Management</h3>
+            <p>Track population, economy, happiness, pollution, education, and safety as your city grows.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Live City Statistics</h3>
+            <p>See instant updates on building placement, dynamic ratings, and quick summaries for smarter decisions.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="builder-section" id="build">
+        <div class="builder-panel">
+          <div class="panel-heading">
+            <p class="eyebrow">Builder Hub</p>
+            <h2>Select a building and craft your city.</h2>
+          </div>
+          <div class="toolbox glass-card">
+            <h3>Building Types</h3>
+            <div class="building-buttons">
+              <button class="building-btn" data-type="house" data-tooltip="Population +100, Happiness +5">🏠 House</button>
+              <button class="building-btn" data-type="office" data-tooltip="Economy +15, Population +20">🏢 Office</button>
+              <button class="building-btn" data-type="park" data-tooltip="Happiness +20, Pollution -5">🌳 Park</button>
+              <button class="building-btn" data-type="factory" data-tooltip="Economy +25, Pollution +15, Happiness -5">🏭 Factory</button>
+              <button class="building-btn" data-type="school" data-tooltip="Education +15, Happiness +5">🏫 School</button>
+              <button class="building-btn" data-type="police" data-tooltip="Safety +15, Happiness +5">🚓 Police Station</button>
+            </div>
+            <p class="tooltip-text">Hover a building for effects.</p>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card glass-card">
+              <span>Population</span>
+              <strong id="stat-population">0</strong>
+            </article>
+            <article class="stat-card glass-card">
+              <span>Economy</span>
+              <strong id="stat-economy">0</strong>
+            </article>
+            <article class="stat-card glass-card">
+              <span>Happiness</span>
+              <strong id="stat-happiness">0</strong>
+            </article>
+            <article class="stat-card glass-card">
+              <span>Pollution</span>
+              <strong id="stat-pollution">0</strong>
+            </article>
+            <article class="stat-card glass-card">
+              <span>Education</span>
+              <strong id="stat-education">0</strong>
+            </article>
+            <article class="stat-card glass-card">
+              <span>Safety</span>
+              <strong id="stat-safety">0</strong>
+            </article>
+          </div>
+
+          <div class="summary-panel glass-card">
+            <h3>City Summary</h3>
+            <div class="summary-row"><span>Total Buildings</span><strong id="summary-buildings">0</strong></div>
+            <div class="summary-row"><span>Most Common</span><strong id="summary-common">None</strong></div>
+            <div class="summary-row"><span>Current Rating</span><strong id="summary-rating">⭐ Needs Improvement</strong></div>
+            <button class="reset-button" id="reset-btn">Reset City</button>
+            <p class="action-message" id="action-message">Select a building first.</p>
+          </div>
+        </div>
+
+        <div class="city-grid-shell">
+          <div class="grid-heading">
+            <p class="eyebrow">City Grid</p>
+            <h2>Build on 64 tiles.</h2>
+          </div>
+          <div class="city-grid" id="city-grid"></div>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <div class="about-card glass-card">
+          <div>
+            <p class="eyebrow">About the Game</p>
+            <h2>Strategic city planning with creative freedom.</h2>
+            <p>City Builder Lite is a browser-based city management simulator that allows users to construct buildings, balance resources, and watch their city evolve through strategic decisions.</p>
+          </div>
+          <div class="about-visual">
+            <div class="mini-city">
+              <span>🏡</span><span>🏢</span><span>🌳</span><span>🏭</span><span>🚓</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <p>Built for architects, planners, and dreamers. <span id="footer-year"></span></p>
+    </footer>
+  </div>
+</body>
+</html>
